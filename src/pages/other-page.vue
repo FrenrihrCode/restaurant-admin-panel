@@ -6,22 +6,19 @@
 
 <template>
 	<div>
-		<p>{{ $t('pages.other.desc') }}</p>
+		<p>{{ 'pages.other.desc' }}</p>
 		<router-link
 			:to="{ name: 'home' }"
-			class="
-				mt-5
-				hover:text-gray-200
-				dark:hover:text-gray-500
-				hover:underline
-			"
-			>{{ $t('pages.home') }}</router-link
+			class="mt-5 hover:text-gray-200 dark:hover:text-gray-500 hover:underline"
+			>{{ 'pages.home' }}</router-link
 		>
 	</div>
 </template>
 
 <style scoped></style>
 
-<route lang="yaml">
-name: other-page
+<route lang="json">
+{
+	"name": "other-page"
+}
 </route>

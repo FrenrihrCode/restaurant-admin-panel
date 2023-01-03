@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite';
-import vue from '@vitejs/plugin-vue';
+import Vue from '@vitejs/plugin-vue';
 import { resolve } from 'path';
 import Components from 'unplugin-vue-components/vite';
 import AutoImport from 'unplugin-auto-import/vite';
@@ -7,18 +7,18 @@ import Icons from 'unplugin-icons/vite';
 import IconsResolver from 'unplugin-icons/resolver';
 import Layouts from 'vite-plugin-vue-layouts';
 import { VitePWA } from 'vite-plugin-pwa';
-import VueI18n from '@intlify/vite-plugin-vue-i18n';
 import generateSitemap from 'vite-ssg-sitemap';
 import VueRouter from 'unplugin-vue-router/vite';
-import { VueRouterExports } from 'unplugin-vue-router';
+import { VueRouterAutoImports } from 'unplugin-vue-router';
+
 // https://vitejs.dev/config/
 export default defineConfig({
 	plugins: [
-		vue(),
 		VueRouter({
 			dts: true,
 			routesFolder: 'src/pages',
 		}),
+		Vue(),
 		Components({
 			dts: true,
 			resolvers: [
@@ -42,8 +42,7 @@ export default defineConfig({
 			imports: [
 				// presets
 				'vue',
-				{ '@vue-router': VueRouterExports },
-				'vue-i18n',
+				VueRouterAutoImports,
 				'@vueuse/core',
 				'@vueuse/head',
 				// custom
@@ -87,11 +86,6 @@ export default defineConfig({
 				],
 			},
 		}),
-		VueI18n({
-			runtimeOnly: true,
-			compositionOnly: true,
-			include: [resolve(__dirname, 'locales/**')],
-		}),
 	],
 	resolve: {
 		alias: {
@@ -102,6 +96,7 @@ export default defineConfig({
 		fs: {
 			strict: true,
 		},
+		port: 5000,
 	},
 	optimizeDeps: {
 		include: ['vue', 'vue-router', '@vueuse/core', '@vueuse/head'],
@@ -114,7 +109,7 @@ export default defineConfig({
 		onFinished() {
 			generateSitemap();
 		},
-		mock: true
+		mock: true,
 	},
 	// https://github.com/vitest-dev/vitest
 	test: {
@@ -126,6 +121,6 @@ export default defineConfig({
 	},
 	ssr: {
 		// TODO: workaround until they support native ESM
-		noExternal: ['workbox-window', /vue-i18n/],
+		noExternal: ['workbox-window'],
 	},
 });
