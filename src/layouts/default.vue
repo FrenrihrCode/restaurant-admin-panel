@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-	<app-header class="layout__header" />
+	<sp-header class="layout__header" />
 	<main class="layout__body">
 		<router-view />
 	</main>

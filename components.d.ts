@@ -9,6 +9,7 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     AppHeader: typeof import('./src/components/AppHeader.vue')['default']
     AuthLogin: typeof import('./src/components/auth/AuthLogin.vue')['default']
+    AuthRegister: typeof import('./src/components/auth/AuthRegister.vue')['default']
     Button: typeof import('./src/components/common/button/button.vue')['default']
     'Icon:bx:bxMoon': typeof import('~icons/bx/bx-moon')['default']
     'Icon:bx:bxsMoon': typeof import('~icons/bx/bxs-moon')['default']
@@ -16,6 +17,7 @@ declare module '@vue/runtime-core' {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SpButton: typeof import('./src/components/common/button/SpButton.vue')['default']
+    SpHeader: typeof import('./src/components/common/layout/SpHeader.vue')['default']
     SpImg: typeof import('./src/components/common/container/SpImg.vue')['default']
     SpInput: typeof import('./src/components/common/form/SpInput.vue')['default']
     SpTitle: typeof import('./src/components/common/text/SpTitle.vue')['default']

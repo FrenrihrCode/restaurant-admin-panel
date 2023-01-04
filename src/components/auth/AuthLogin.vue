@@ -25,9 +25,7 @@
 		/>
 		<p class="auth-login__cta">
 			¿No posees una cuenta?
-			<router-link to="/other-page">
-				Click aquí para crearte una
-			</router-link>
+			<router-link to="/register"> Create una </router-link>
 		</p>
 	</form>
 </template>
@@ -42,7 +40,6 @@
 			@apply mt-4;
 		}
 		&__input {
-			@apply w-full;
 			@apply pr-5;
 		}
 		&__redirect {

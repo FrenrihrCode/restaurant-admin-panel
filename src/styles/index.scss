@@ -18,24 +18,23 @@ p {
 	@apply text-body;
 }
 .sp-input {
+	@apply w-full;
+	@apply flex flex-col;
+	@apply text-body;
+	@apply text-text-body;
+
 	span {
 		@apply mb-2;
 	}
-	label {
-		@apply flex flex-col;
-		@apply text-body;
-		@apply text-text-body;
-	}
 	input {
-		@apply bg-white;
-		@apply rounded-3xl;
-		@apply border-primary;
+		@apply w-full;
+		@apply p-0;
+		@apply text-sm leading-4;
+		@apply border-none outline-none ring-0;
 
-		&:active,
 		&:hover,
 		&:focus {
-			@apply border-primary;
-			@apply ring-primary;
+			@apply border-none outline-none ring-0;
 		}
 	}
 }

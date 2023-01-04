@@ -13,7 +13,7 @@ module.exports = {
 					'16px',
 					{
 						lineHeight: '28px',
-						letterSpacing: '-0.02em',
+						letterSpacing: '0.02em',
 						fontWeight: '400',
 					},
 				],
@@ -21,7 +21,7 @@ module.exports = {
 					'40px',
 					{
 						lineHeight: '52px',
-						letterSpacing: '-0.02em',
+						letterSpacing: '0.02em',
 						fontWeight: '700',
 					},
 				],

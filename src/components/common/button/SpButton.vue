@@ -1,21 +1,21 @@
-<template>
-	<button :class="[style, 'sp-button']" :type="type">
-		{{ text }}
-	</button>
-</template>
-
 <script lang="ts" setup>
 	withDefaults(
 		defineProps<{
 			text: string;
 			type?: 'button' | 'submit' | 'reset';
-			style?: 'primary' | 'secondary' | 'ghost';
+			color?: 'primary' | 'secondary' | 'ghost';
 			disabled?: boolean;
 			loading?: boolean;
 		}>(),
-		{ type: 'button', style: 'primary' }
+		{ type: 'button', color: 'primary' }
 	);
 </script>
+
+<template>
+	<button class="sp-button" :class="[color]" :type="type">
+		{{ text }}
+	</button>
+</template>
 
 <style lang="scss" scoped>
 	.sp-button {
