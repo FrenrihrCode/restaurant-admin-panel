@@ -1,10 +1,3 @@
-<template>
-	<div class="title" :class="{ 'text-center': center }">
-		<h2>{{ title }}</h2>
-		<h4 v-if="subtitle">{{ subtitle }}</h4>
-	</div>
-</template>
-
 <script lang="ts" setup>
 	defineProps<{
 		title: string;
@@ -12,6 +5,13 @@
 		center?: boolean;
 	}>();
 </script>
+
+<template>
+	<div class="title" :class="{ 'text-center': center }">
+		<h2>{{ title }}</h2>
+		<h4 v-if="subtitle">{{ subtitle }}</h4>
+	</div>
+</template>
 
 <style lang="scss" scoped>
 	.title {

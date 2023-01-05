@@ -1,10 +1,10 @@
-import App from '@/App.vue';
-import { ViteSSG } from 'vite-ssg';
-
 import '@/styles/index.scss';
-import { ViteSetupModule } from './types/ViteSetupModule';
+import 'floating-vue/dist/style.css';
 import { routes } from 'vue-router/auto/routes';
 import { setupLayouts } from 'virtual:generated-layouts';
+import { ViteSSG } from 'vite-ssg';
+import type { ViteSetupModule } from './types/ViteSetupModule';
+import App from '@/App.vue';
 
 export const createApp = ViteSSG(
 	App,

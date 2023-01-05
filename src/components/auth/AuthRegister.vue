@@ -27,7 +27,7 @@
 		<sp-button text="Registrarse" type="submit" class="auth-login__btn" />
 		<p class="auth-login__cta">
 			¿Ya posees una cuenta?
-			<router-link to="/"> Inicia sesión </router-link>
+			<router-link to="/login"> Inicia sesión </router-link>
 		</p>
 	</form>
 </template>

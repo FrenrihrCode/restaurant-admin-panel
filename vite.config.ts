@@ -1,6 +1,6 @@
+import { resolve } from 'path';
 import { defineConfig } from 'vite';
 import Vue from '@vitejs/plugin-vue';
-import { resolve } from 'path';
 import Components from 'unplugin-vue-components/vite';
 import AutoImport from 'unplugin-auto-import/vite';
 import Icons from 'unplugin-icons/vite';
@@ -101,7 +101,7 @@ export default defineConfig({
 	optimizeDeps: {
 		include: ['vue', 'vue-router', '@vueuse/core', '@vueuse/head'],
 	},
-	// @ts-ignore
+	// @ts-expect-error: Ignore for static generator
 	ssgOptions: {
 		script: 'async',
 		formatting: 'minify',

@@ -1,5 +1,9 @@
 <script lang="ts" setup>
-	const onSubmit = () => {};
+	const router = useRouter();
+
+	const onSubmit = () => {
+		router.push('/');
+	};
 </script>
 
 <template>

@@ -1,7 +1,7 @@
 import {
+	createMemoryHistory,
 	createRouter,
 	createWebHistory,
-	createMemoryHistory,
 } from 'vue-router/auto';
 
 export const router = createRouter({

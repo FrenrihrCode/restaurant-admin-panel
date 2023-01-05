@@ -44,3 +44,17 @@ p {
 	@apply min-w-[188px] min-h-[44px];
 	@apply rounded-3xl;
 }
+
+// tooltip override
+.v-popper--theme-tooltip .v-popper__inner {
+	background: #ea6a12 !important;
+	color: #ffffff !important;
+	padding: 5px 10px !important;
+	border-radius: 5px !important;
+	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15) !important;
+	font-size: 12px;
+}
+
+.v-popper--theme-tooltip .v-popper__arrow-outer {
+	border-color: #ea6a12 !important;
+}
